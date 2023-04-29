@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('bulletin', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('label');
             $table->string('couleur');
             $table->string('photo');
             $table->unsignedInteger('idvote');

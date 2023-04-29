@@ -1,3 +1,19 @@
 php artisan make:migration create_table_table --create=table
-php artisan migrate:generate
-php artisan generate:modelfromtable --table=users
+php artisan migrate:fresh
+
+--Processus pour mettre en place l'initialisation des migrations
+composer require reliese/laravel --dev
+php artisan vendor:publish --tag=reliese-models
+php artisan config:clear
+php artisan migrate:fresh
+
+--Models a generer
+composer require "laracademy/generators" --dev
+php artisan
+php artisan generate:modelfromtable --table=region
+php artisan generate:modelfromtable --table=vote
+php artisan generate:modelfromtable --table=bulletin
+php artisan generate:modelfromtable --table=election
+php artisan generate:modelfromtable --table=participant
+
+--Create controller
