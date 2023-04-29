@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @property int    $id
@@ -17,6 +18,7 @@ class Region extends Model
      *
      * @var string
      */
+    use HasFactory;
     protected $table = 'region';
 
     /**

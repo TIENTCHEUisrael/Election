@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @property int    $id
@@ -18,6 +19,7 @@ class Bulletin extends Model
      *
      * @var string
      */
+    use HasFactory;
     protected $table = 'bulletin';
 
     /**
