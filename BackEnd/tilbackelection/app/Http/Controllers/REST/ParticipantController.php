@@ -8,32 +8,50 @@ use Illuminate\Http\Request;
 
 class ParticipantController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $participant = Participant::all();
+        return response()->json($participant,201);
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        try{
+                DB::beginTransaction();
+                $participant = Participant:: create([
+                'cni' => $request->cni,
+                'nom' => $request->nom,
+                'prenom' => $request->prenom,
+                'telephone' => $request->telephone,
+                'age' => $request->age,
+                'sexe' => $request->sexe,
+                'status' => $request->status,
+                'login' => $request->login,
+                //'password' =>Hash::make($request->password),
+                'pwd' => $request->pwd,
+                'email' => $request->email,
+                'etat' => $request->etat,
+                'idregion' => $request->idregion,
+            ]);
+
+            DB::commit();
+
+
+            return response()->json($participant,201);
+        }catch(Throwable $th){            
+            dd($th);
+            return response()->json('{"erreur": "impossible de sauvegarde"}',404);
+
+        }
+
+
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Models\Participant  $participant
-     * @return \Illuminate\Http\Response
      */
     public function show(Participant $participant)
     {
@@ -42,24 +60,56 @@ class ParticipantController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Participant  $participant
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Participant $participant)
+    public function update(Request $request,$id)
     {
         //
+        try {
+            //code...
+            DB::beginTransaction();            
+            $participant = Participant::find($id);
+            $participant->update($request->all());
+            DB::commit();
+            return response()->json($participant,200);
+        } catch (\Throwable $th) {
+            //throw $th;
+            return response()->json('erreur de mise a jour',500);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Participant  $participant
-     * @return \Illuminate\Http\Response
      */
-    public function destroy(Participant $participant)
+    public function destroy($id)
     {
         //
+        try {
+            
+            DB::beginTransaction();
+            $participant=Participant::find($id);
+            $participant->delete();
+            DB::commit();
+          return response()->json('participant suprimer avec succes',200);
+
+        } catch (\Throwable $th) {
+            //throw $th;
+            return response()->json('erreur au niveau de la supression',500);
+        }
+
+
+    }
+
+    public function Status($id){
+        try {
+            //code...
+        DB::beginTransaction();
+        $part = Participant::find($id);
+        $part->etat=!($part->etat);
+        $part->update();
+        DB::commit();
+        return response()->json("status mise a jour avec succes",200);
+        } catch (\Throwable $th) {
+            return response()->json('erreur participant inactif',500);
+        }
     }
 }

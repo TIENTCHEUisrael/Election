@@ -18,6 +18,7 @@ class VoteFactory extends Factory
     {
         return [
             //
+            "date_election"=> Str::upper(Str::random(10))
         ];
     }
 }

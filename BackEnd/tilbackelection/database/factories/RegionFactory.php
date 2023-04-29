@@ -18,6 +18,7 @@ class RegionFactory extends Factory
     {
         return [
             //
+            "label"=> Str::upper(Str::random(10))
         ];
     }
 }

@@ -16,8 +16,22 @@ class ParticipantFactory extends Factory
      */
     public function definition()
     {
+        $sexe=['M','F'];
+
+        //$random_lettre = chr(rand(ord($masculin), ord($feminin)));
+        $regions=count(Region::all())-1;
         return [
             //
+            "cni"=> Str::upper(Str::random(10)),
+            "nom"=> $this -> faker ->name(),
+            "prenom"=> $this -> faker->firstName(),
+            "telephone"=> $this -> faker ->phoneNumber(),
+            "age"=> rand(21,100),
+            "sexe"=>$sexe[rand(0,1)],
+            "login"=> $this->faker ->username(),
+            "pwd"=> Str::upper(Str::random(10)),
+            "email"=> $this->faker ->email(),
+            "idregion"=> rand(1,$regions)
         ];
     }
 }
