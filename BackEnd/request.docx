@@ -30,3 +30,13 @@ php artisan make:controller REST/VotenController --model=Vote --api
 php artisan make:controller REST/ElectionController --model=Election --api
 php artisan make:controller REST/BulletinController --model=Bulletin --api
 php artisan make:controller REST/ParticipantController --model=Participant --api
+
+--Lister les routes que l'on peut appeler avec Postman
+php artisan route:list
+
+--Creer des factory pour la generation des données de maniere automatique
+php artisan make:factory RegionFactory --model=Region
+php artisan make:factory VoteFactory --model=Vote
+php artisan make:factory ElectionFactory --model=Election
+php artisan make:factory BulletinFactory --model=Bulletin
+php artisan make:factory ParticipantFactory --model=Participant
