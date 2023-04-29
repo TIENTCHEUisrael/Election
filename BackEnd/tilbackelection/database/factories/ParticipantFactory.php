@@ -26,16 +26,16 @@ class ParticipantFactory extends Factory
         return [
             //
             "cni"=> Str::upper(Str::random(10)),
-            "nom"=> $this -> faker ->name(),
-            "prenom"=> $this -> faker->firstName(),
-            "telephone"=> $this -> faker ->phoneNumber(),
+            "nom"=> $this -> fake() ->name(),
+            "prenom"=> $this -> fake()->firstName(),
+            "telephone"=> $this -> fake() ->phoneNumber(),
             "sexe"=> Str::upper(),
             "age"=> rand(21,100),
             "sexe"=>$sexe[rand(0,1)],
             "status"=> $status[rand(0,1)],
-            "login"=> $this->faker ->username(),
+            "login"=> $this->fake() ->username(),
             "pwd"=> Str::upper(Str::random(10)),
-            "email"=> $this->faker ->email(),
+            "email"=> $this->fake() ->email(),
             "idregion"=> rand(1,$regions)
         ];
     }
