@@ -43,3 +43,10 @@ php artisan make:factory ParticipantFactory --model=Participant
 
 --Apres avoir mis les données a generer, ceci pour actualiser en envoyé dans la base de données
 php artisan migrate:fresh --seed
+
+--liste des actions par ordre
+Creer les migrations
+Les inserer dans la base de données
+Creer les models
+Creer les factory
+Et genererces données
