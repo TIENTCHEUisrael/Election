@@ -8,6 +8,7 @@ php artisan config:clear
 php artisan migrate:fresh
 
 --Models a generer
+lien : https://github.com/laracademy/generators
 composer require "laracademy/generators" --dev
 php artisan
 php artisan generate:modelfromtable --table=region
@@ -16,4 +17,16 @@ php artisan generate:modelfromtable --table=bulletin
 php artisan generate:modelfromtable --table=election
 php artisan generate:modelfromtable --table=participant
 
---Create controller
+--Create controller manually
+php artisan make:controller RegionController
+php artisan make:controller VoteController
+php artisan make:controller ElectionController
+php artisan make:controller BulletinController
+php artisan make:controller ParticipantController
+
+--Create controller for Api
+php artisan make:controller REST/RegionController --model=Region --api
+php artisan make:controller REST/VotenController --model=Vote --api
+php artisan make:controller REST/ElectionController --model=Election --api
+php artisan make:controller REST/BulletinController --model=Bulletin --api
+php artisan make:controller REST/ParticipantController --model=Participant --api
