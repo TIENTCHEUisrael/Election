@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('vote', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date_election');
-            $table->timestamps();
         });
     }
 

@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('region', function (Blueprint $table) {
             $table->increments('id');
             $table->string('label');
-            $table->timestamps();
         });
     }
 
