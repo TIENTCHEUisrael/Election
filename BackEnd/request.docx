@@ -1,0 +1,3 @@
+php artisan make:migration create_table_table --create=table
+php artisan migrate:generate
+php artisan generate:modelfromtable --table=users
