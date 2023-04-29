@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @vite(['resources/js/app.js'])
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -43,7 +42,7 @@
                 <th>{{$r->telephone}}</th>
                 <td>
                     <a href="/participant_delete/{{$r->id}}" class="btn btn-danger">supprimer</a>
-                    <a href="/participant_edite/{{$r->id}}" class="btn btn-info">Editer</a>
+                    <a href="/participant_edit/{{$r->id}}" class="btn btn-info">Editer</a>
                 </td>
             </tr>
 
