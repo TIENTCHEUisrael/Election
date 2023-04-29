@@ -40,3 +40,6 @@ php artisan make:factory VoteFactory --model=Vote
 php artisan make:factory ElectionFactory --model=Election
 php artisan make:factory BulletinFactory --model=Bulletin
 php artisan make:factory ParticipantFactory --model=Participant
+
+--Apres avoir mis les données a generer, ceci pour actualiser en envoyé dans la base de données
+php artisan migrate:fresh --seed

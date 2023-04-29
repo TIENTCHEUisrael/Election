@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Vote;
 use Illuminate\Http\Request;
 
-class VotenController extends Controller
+class VoteController extends Controller
 {
     /**
      * Display a listing of the resource.
