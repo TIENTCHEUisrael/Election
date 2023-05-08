@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property int  $id
  * @property int  $created_at
  * @property int  $updated_at
- * @property Date $date_election
+ * @property string $date_election
  */
 class Vote extends Model
 {
@@ -51,7 +51,7 @@ class Vote extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'int', 'date_election' => 'date', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
+        'id' => 'int', 'date_election' => 'string', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
     ];
 
     /**
@@ -59,9 +59,7 @@ class Vote extends Model
      *
      * @var array
      */
-    protected $dates = [
-        'date_election', 'created_at', 'updated_at'
-    ];
+    
 
     /**
      * Indicates if the model should be timestamped.

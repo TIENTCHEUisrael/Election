@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         \App\Models\Region::factory(10)->create();
         \App\Models\Participant::factory(10)->create();        
+        \App\Models\Region::factory(10)->create();  
+         \App\Models\Vote::factory(10)->create();     
     }
 }

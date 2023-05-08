@@ -41,7 +41,7 @@ class VoteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Region $region)
+    public function show(Vote $Vote)
     {
         //
     }
@@ -76,7 +76,7 @@ class VoteController extends Controller
             $vote=Vote::find($id);
             $vote->delete();
             DB::commit();
-          return response()->json('la region a ete suprimer avec succes',200);
+          return response()->json('le Vote a ete suprimer avec succes',200);
         } catch (\Throwable $th) {
             //throw $th;
             return response()->json('erreur au niveau de la supression',500);

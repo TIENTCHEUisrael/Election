@@ -31,7 +31,7 @@ class RegionController extends Controller
             DB::beginTransaction();
             $region = Region::create(['label' => $request->label]);
             DB::commit();
-            return response()->json($region,201);
+            return response()->json($region,200);
         } catch (\Throwable $th) {
             //throw $th;
             return response()->json("erreur d'insertion",500);
