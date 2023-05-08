@@ -5,6 +5,7 @@ namespace App\Http\Controllers\REST;
 use App\Http\Controllers\Controller;
 use App\Models\Vote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VoteController extends Controller
 {

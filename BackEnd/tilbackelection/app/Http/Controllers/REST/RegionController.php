@@ -5,6 +5,7 @@ namespace App\Http\Controllers\REST;
 use App\Http\Controllers\Controller;
 use App\Models\Region;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RegionController extends Controller
 {
@@ -34,7 +35,7 @@ class RegionController extends Controller
             return response()->json($region,200);
         } catch (\Throwable $th) {
             //throw $th;
-            return response()->json("erreur d'insertion",500);
+            return response()->json($th-> getMessage(),500);
         }
     }
 

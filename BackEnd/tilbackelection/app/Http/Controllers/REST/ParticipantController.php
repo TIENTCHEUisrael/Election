@@ -5,13 +5,14 @@ namespace App\Http\Controllers\REST;
 use App\Http\Controllers\Controller;
 use App\Models\Participant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ParticipantController extends Controller
 {
     public function index()
     {
         $participant = Participant::all();
-        return response()->json($participant,201);
+        return response()->json($participant,200);
     }
 
     /**
@@ -39,7 +40,7 @@ class ParticipantController extends Controller
             DB::commit();
 
 
-            return response()->json($participant,201);
+            return response()->json($participant,200);
         }catch(Throwable $th){            
             dd($th);
             return response()->json('{"erreur": "impossible de sauvegarde"}',404);

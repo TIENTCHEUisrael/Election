@@ -5,6 +5,7 @@ namespace App\Http\Controllers\REST;
 use App\Http\Controllers\Controller;
 use App\Models\Election;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ElectionController extends Controller
 {
@@ -16,7 +17,7 @@ class ElectionController extends Controller
     public function index()
     {
         $Election = Election::all();
-        return response()->json($Election,201);
+        return response()->json($Election,200);
     }
 
     /**

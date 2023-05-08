@@ -22,7 +22,7 @@ class BulletinFactory extends Factory
         return [
             //
             "label"=> Str::upper(Str::random(10)),
-            "couleur"=> $color[rand(0,8)],
+            "couleur"=> $color[rand(0,7)],
             "photo"=>Str::upper(Str::random(10)),
             "idvote"=> rand(1,$vote)
         ];

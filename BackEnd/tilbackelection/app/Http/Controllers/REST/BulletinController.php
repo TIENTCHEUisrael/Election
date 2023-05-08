@@ -5,6 +5,8 @@ namespace App\Http\Controllers\REST;
 use App\Http\Controllers\Controller;
 use App\Models\Bulletin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Throwable;
 
 class BulletinController extends Controller
 {
@@ -36,7 +38,7 @@ class BulletinController extends Controller
             DB::commit();
 
 
-            return response()->json($participant,201);
+            return response()->json($participant,200);
         }catch(Throwable $th){            
             dd($th);
             return response()->json('{"erreur": "impossible de sauvegarde"}',404);
