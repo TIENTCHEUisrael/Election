@@ -1,0 +1,29 @@
+.add_region {
+    width: 400px;
+    background: white;
+    box-shadow: 0 0 10px 1px grey;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 350px;
+}
+
+form {
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns button {
+    width: 150px;
+}
