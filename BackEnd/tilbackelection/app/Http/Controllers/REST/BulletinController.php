@@ -18,7 +18,7 @@ class BulletinController extends Controller
     public function index()
     {
         $bulletin = Bulletin::all();
-        return response()->json($participant,201);
+        return response()->json($bulletin,200);
     }
 
     /**
