@@ -27,6 +27,7 @@ class BulletinController extends Controller
     public function store(Request $request)
     {
         //
+        
     }
 
     /**

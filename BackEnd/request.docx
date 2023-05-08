@@ -50,3 +50,5 @@ Les inserer dans la base de données
 Creer les models
 Creer les factory
 Et generer ces données
+--Créer les Tests
+php artisan make:test
