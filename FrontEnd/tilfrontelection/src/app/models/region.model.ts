@@ -1,8 +1,16 @@
-export class Region {
+export class Region{
     public id: number;
-    public label:string;
+    public nom: string;
+    public description: string;
 
-    public constructor(label: string = "") {
-        this.label = label;
+    constructor(
+         id: number,
+         nom: string,
+         description: string,
+    ){
+        this.description = description;
+        this.nom = nom;
+        this.id = id;
     }
 }
+

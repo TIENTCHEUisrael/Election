@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { RegionComponent } from './components/region-module/region/region.component';
-import { AddRegionComponent } from './components/region-module/add-region/add-region.component';
+import { HomeComponent } from './components/home/home.component';
+import { ElectionComponent } from './components/election/election.component';
+import { RegionCreateComponent } from './components/region-create/region-create.component';
 
 
-const routes: Routes = [
-  //{component:HeaderComponent},
-  {path:"regions",component:RegionComponent},
-  {path: "add_region", component: AddRegionComponent},
-  //{component:FooterComponent}
+
+const routes: Routes = [ 
+  {path: 'home', component: HomeComponent},
+  {path: 'election', component: ElectionComponent},
+  
+  {path: 'region', component: RegionCreateComponent},
+
+  { path: '', redirectTo:'home', pathMatch:'full'},
+  {path: '**', component: HomeComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

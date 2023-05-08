@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormRegionComponent } from './form-region.component';
+import { RegionCreateComponent } from './region-create.component';
 
-describe('FormRegionComponent', () => {
-  let component: FormRegionComponent;
-  let fixture: ComponentFixture<FormRegionComponent>;
+describe('RegionCreateComponent', () => {
+  let component: RegionCreateComponent;
+  let fixture: ComponentFixture<RegionCreateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormRegionComponent ]
+      declarations: [ RegionCreateComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FormRegionComponent);
+    fixture = TestBed.createComponent(RegionCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

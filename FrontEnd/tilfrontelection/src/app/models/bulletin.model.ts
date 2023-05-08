@@ -1,11 +1,16 @@
+export class Bulletin{
+    public id: number;
+    public couleur: string;
+    public photo: string;
 
- export class Bulletin {
-    public id?: number;
-    public couleur?:string;
-    public photo?:string;
 
-
-    public constructor() {
-
+    constructor(
+         id: number,
+         couleur: string,
+         photo: string,
+    ){
+        this.id = id;
+        this.couleur = couleur;
+        this.photo = photo;
     }
 }

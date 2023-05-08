@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddRegionComponent } from './add-region.component';
+import { NavbarComponent } from './navbar.component';
 
-describe('AddRegionComponent', () => {
-  let component: AddRegionComponent;
-  let fixture: ComponentFixture<AddRegionComponent>;
+describe('NavbarComponent', () => {
+  let component: NavbarComponent;
+  let fixture: ComponentFixture<NavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddRegionComponent ]
+      declarations: [ NavbarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddRegionComponent);
+    fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
