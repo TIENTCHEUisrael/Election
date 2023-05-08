@@ -1,0 +1,133 @@
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+}
+
+header{
+    position: relative;
+    width: 100%;
+}
+header .head{
+    position: relative;
+    display: flex;
+    padding: 20px 10px 20px 20px;
+    flex-direction: row;
+    width: 100%;
+    word-spacing: 10px;
+    border-bottom: 1px solid #dbd9db    ;
+}
+
+header .head .navbar a{
+    margin-top: 5px;
+    font-weight: bold;
+    color: #2b2b2b;
+    font-size: 18px;
+    margin-left: 10px;
+    justify-content: space-between;   
+}
+header .head .navbar a:hover{
+    border-bottom: 3px solid orange;
+}
+header .head .navbar .logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: #2b2b2b;
+    margin-right: 17rem;
+}
+header .head .navbar .log{
+    text-align: end;
+    margin-left: 10rem;
+}
+header .head .navbar .sign{
+    border-radius: 20px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    padding: 7px 7px;
+}
+header .head .navbar .sign:hover{
+    background-color: black;
+    color: white;
+}
+header .heading{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+}
+.heading .head-left{
+    width: 50%;
+}
+.heading .head-left .title{
+    font-size: 35px;
+    line-height: 3rem;
+    width: 60%;
+}
+.heading .head-left .desc{
+    font-size: 15px;
+    width: 70%;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+.heading .head-left .btn{
+    margin-top: 20px    ;
+}
+.heading .head-left .btn .more{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+.heading .head-left form{
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 30px;
+    padding: 5px;
+}
+button{
+    border-radius: 30px;
+    width: fit-content;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    padding: 10px 10px;
+}
+.heading .head-right{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    
+}
+.heading .head-right .container .head{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.heading .head-right .container .head img{
+    height: 20rem;
+    width: 100%;
+}
+.heading .head-right .container .foot{
+    padding: 20px;
+}
+.heading .head-right .container .foot .btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.heading .head-right .container .foot .btn .back{
+    border-radius: 50%;
+    margin-right: 10px;
+    background: white;
+    color: #000;
+}
+.heading .head-right .container .foot .btn .next{
+    border-radius: 50%;
+    background: white;
+    color: #000;
+}

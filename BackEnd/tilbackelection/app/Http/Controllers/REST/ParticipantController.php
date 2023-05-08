@@ -30,7 +30,6 @@ class ParticipantController extends Controller
                 'sexe' => $request->sexe,
                 'status' => $request->status,
                 'login' => $request->login,
-                //'password' =>Hash::make($request->password),
                 'pwd' => $request->pwd,
                 'email' => $request->email,
                 'etat' => $request->etat,

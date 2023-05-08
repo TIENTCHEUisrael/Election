@@ -1,0 +1,29 @@
+<header class="header">
+    <section class="head">
+        <nav class="navbar">
+            <a href="#home" class="logo">VoterCm.com</a>
+            <a href="#">Home</a>
+            <a href="#">Participants</a>
+            <a href="#">Region</a>
+            <a href="#" class="log">Log in</a>
+            <a href="#"><button class="sign">Sing up</button></a>
+        </nav>
+    </section>
+    <section class="heading">
+        <div class="head-left">
+            <h1 class="title">VoterCm.com</h1>
+            <form>
+                <input type = "text" class = "search-input" placeholder="Enter Your email">
+                <button type = "submit" class = "submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="head-right">
+            <p>Nouveaux Participants aux election 2023</p>
+            <p>Vottez massivement pour l'avenir du pays</p>
+        </div>
+    </section>
+</header>
+<ul>
+    <li *ngFor="let r of regions">{{r.label}} --- {{r.id}}</li>
+</ul>
+<h1>{{i}}</h1>

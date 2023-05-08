@@ -1,0 +1,125 @@
+
+/*********Footer***********/
+footer{
+    padding-bottom: 0%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.slogan-footer {
+    margin-bottom: 0;
+    padding-right: 0;
+    color: white;
+    font-size: 40px;
+    line-height: 46px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft-top-right{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.footer-top{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.expertise{
+    display: flex;
+    flex-direction: column;
+    margin: 10% 50px 0px 0px;
+}
+.expertise a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.contact form{
+    background: #fff;
+    border-radius: 2rem;
+    display: flex;
+    width: fit-content;
+    padding: 2px;
+    border: 1px solid #2b2b2b;
+}
+    
+.contact form .submit{
+    border-radius: 30px;
+    width: 100px;
+    background-color: black;
+    margin-left: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 10px;
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 0.3px solid rgba(138, 135, 131, 0.493);
+    margin-top: 30px;
+
+}
+
+.ft-bottom-left{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-bottom a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+}
+
+.footer-bottom a:hover{
+    color: orange;
+}
+.ft-bottom-center{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft-bottom-right{
+    flex-direction: column;
+    display: flex;
+    width: 350px;
+}
+
+.ft-footer{
+    border-top: 0.3px solid rgba(138, 135, 131, 0.493);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(167, 165, 164);
+    margin-top: 30px;
+}
+
+.ft-ft-right a{
+   font-weight: bold;
+    padding: 10px 10px;
+    color:  rgba(138, 135, 131, 0.493);
+    text-decoration: none;
+}
+
+
+

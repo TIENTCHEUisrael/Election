@@ -15,52 +15,85 @@ class BulletinController extends Controller
      */
     public function index()
     {
-        //
+        $bulletin = Bulletin::all();
+        return response()->json($participant,201);
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
-        
+        try{
+                DB::beginTransaction();
+                $bulletin = Bulletin:: create([
+                'label' => $request->label,
+                'couleur' => $request->couleur,
+                'photo' => $request->photo,
+                'idvote' => $request->idvote,
+            ]);
+
+            DB::commit();
+
+
+            return response()->json($participant,201);
+        }catch(Throwable $th){            
+            dd($th);
+            return response()->json('{"erreur": "impossible de sauvegarde"}',404);
+
+        }
+
+
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Models\Bulletin  $bulletin
-     * @return \Illuminate\Http\Response
      */
-    public function show(Bulletin $bulletin)
+    public function show(Bulletin $participant)
     {
         //
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Bulletin  $bulletin
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bulletin $bulletin)
+    public function update(Request $request,$id)
     {
         //
+        try {
+            //code...
+            DB::beginTransaction();            
+            $bulletin = Bulletin::find($id);
+            $bulletin->update($request->all());
+            DB::commit();
+            return response()->json($bulletin,200);
+        } catch (\Throwable $th) {
+            //throw $th;
+            return response()->json('erreur de mise a jour',500);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Bulletin  $bulletin
-     * @return \Illuminate\Http\Response
      */
-    public function destroy(Bulletin $bulletin)
+    public function destroy($id)
     {
         //
+        try {
+            
+            DB::beginTransaction();
+            $bulletin=Bulletin::find($id);
+            $bulletin->delete();
+            DB::commit();
+          return response()->json('Bulletin suprimer avec succes',200);
+
+        } catch (\Throwable $th) {
+            //throw $th;
+            return response()->json('erreur au niveau de la supression',500);
+        }
+
+
     }
+
+   
 }
