@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Vote;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Throwable;
 
 class VoteController extends Controller
 {

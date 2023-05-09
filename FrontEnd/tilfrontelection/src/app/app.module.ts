@@ -1,32 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { RegionComponent } from './component/region/region.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ParticipantComponent } from './component/participant/participant.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BulletinComponent } from './component/bulletin/bulletin.component';
-import { VoteComponent } from './component/vote/vote.component';
-import { ElectionComponent } from './component/election/election.component';
+import { AppRoutingModule } from './app-routing.module';
+
+
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { RegionComponent } from './components/Region/Region.component';
+import { Edit_regionComponent } from './components/edit_region/edit_region.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    MainComponent,
+    FooterComponent,
+    Edit_regionComponent,
     RegionComponent,
-    ParticipantComponent,
-    BulletinComponent,
-    VoteComponent,
-    ElectionComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
