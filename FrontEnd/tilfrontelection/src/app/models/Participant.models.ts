@@ -11,8 +11,8 @@ export class Participant {
 		public pwd!:string
 		public email!:string
 		public tel!:string
-    public statut!:string
-    public etat!:boolean
+		public statut!:string
+		public etat!:boolean
 
     public constructor()
     {
