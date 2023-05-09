@@ -2,7 +2,7 @@ import { Bulletin } from "./Bulletin.models";
 import { Election } from "./Election.models";
 import { Participant } from "./Participant.models";
 
-export class Region {
+export class Vote {
 
   public Id!:number;
   public date!:Date;
@@ -12,4 +12,11 @@ export class Region {
   constructor() {
 
   }
+}
+
+export class Resultat{
+  public idBulletin:number;
+  public count:number;
+
+  constructor(){}
 }

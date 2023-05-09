@@ -29,3 +29,4 @@ Route::apiResource('region',RegionController::class);
 Route::apiResource('Election',ElectionController::class);
 Route::apiResource('Vote',VoteController::class);
 Route::apiResource('Bulletin',BulletinController::class);
+Route::get('resultat',[VoteController::class,'resultat']);

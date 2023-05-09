@@ -11,6 +11,7 @@ import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegionComponent } from './components/Region/Region.component';
 import { Edit_regionComponent } from './components/edit_region/edit_region.component';
+import { ResultComponent } from './components/result/result.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { Edit_regionComponent } from './components/edit_region/edit_region.compo
     FooterComponent,
     Edit_regionComponent,
     RegionComponent,
+    ResultComponent,
   ],
   imports: [
     ReactiveFormsModule,

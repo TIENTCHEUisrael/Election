@@ -4,6 +4,7 @@ namespace App\Http\Controllers\REST;
 
 use App\Http\Controllers\Controller;
 use App\Models\Vote;
+use App\Models\Bulletin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Throwable;
@@ -90,11 +91,10 @@ class VoteController extends Controller
         }
     }
 
-    public function resultat(){
-        try {
-            
-        } catch (\Throwable $th) {
-            return response()->json($th);
-        }
+    public function resultat(){        
+        DB::beginTransaction();
+        $resultat= DB::select('SELECT idBulletin, COUNT(id) FROM `vote` GROUP BY idBulletin');
+        return response()->json($resultat, 200);
+        
     }
 }

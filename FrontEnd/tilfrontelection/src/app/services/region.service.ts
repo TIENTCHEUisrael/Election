@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Region } from '../models/Region.models';
+import { Vote,Resultat } from '../models/Vote.models';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -8,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class RegionService {
   CREATE_REGION: string = 'http://localhost:8000/api/region';
+  CREATE_RESULTAT:string='http://localhost:8000/api/resultat';
 
   constructor(public http: HttpClient) {}
 
@@ -35,5 +37,12 @@ export class RegionService {
   // Suppression d'une région grace a son id
   deleteRegion(id: number): Observable<boolean> {
     return this.http.delete<boolean>(`${this.CREATE_REGION}/${id}`);
+  }
+
+
+
+
+  loadResultat(): Observable<Resultat[]> {
+    return this.http.get<Resultat[]>(this.CREATE_RESULTAT);
   }
 }

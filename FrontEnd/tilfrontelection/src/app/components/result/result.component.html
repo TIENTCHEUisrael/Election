@@ -1,0 +1,19 @@
+<div>
+    <h1>Resultat des votes</h1>
+    <button (click)="getresultat()">Afficher</button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>vote</th>
+            <th>Bulletin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vote of VoteData">
+            <td>{{vote.idBulletin}}</td>
+            <td>{{vote.count}}</td>
+        </tr>
+    </tbody>
+</table>

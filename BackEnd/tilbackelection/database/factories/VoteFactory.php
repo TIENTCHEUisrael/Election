@@ -21,9 +21,9 @@ class VoteFactory extends Factory
     
     public function definition()
     {
-        $bulletins=count(Bulletin::all())-1;
-        $elections=count(Election::all())-1;
-        $participants=count(Participant::all())-1;
+        $bulletins=count(Bulletin::all());
+        $elections=count(Election::all());
+        $participants=count(Participant::all());
         return [
             //
             "date_election"=> fake()->date(),
