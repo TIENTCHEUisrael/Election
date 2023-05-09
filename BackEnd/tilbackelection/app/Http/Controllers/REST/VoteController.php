@@ -31,7 +31,12 @@ class VoteController extends Controller
         try {
             //code...
             DB::beginTransaction();
-            $vote = Vote::create(['date_election' => $request->date_election]);
+            $vote = Vote::create([
+                'date_election' => $request->date_election,
+                'idBulletin' => $request->idBulletin,
+                'idParticipant' => $request->idParticipant,
+                'idElection' => $request->idElection,
+            ]);
             DB::commit();
             return response()->json($vote,201);
         } catch (\Throwable $th) {
@@ -82,6 +87,14 @@ class VoteController extends Controller
         } catch (\Throwable $th) {
             //throw $th;
             return response()->json('erreur au niveau de la supression',500);
+        }
+    }
+
+    public function resultat(){
+        try {
+            
+        } catch (\Throwable $th) {
+            return response()->json($th);
         }
     }
 }

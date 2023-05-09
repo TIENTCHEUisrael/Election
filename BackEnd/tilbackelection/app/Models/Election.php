@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @property int    $id
- * @property int    $idvote
  * @property string   $date_election
  * @property string $label
  * @property string $description
@@ -36,7 +35,7 @@ class Election extends Model
      * @var array
      */
     protected $fillable = [
-        'date_election', 'label', 'description', 'statut', 'idvote'
+        'date_election', 'label', 'description', 'statut'
     ];
 
     /**
@@ -54,7 +53,7 @@ class Election extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'int', 'date_election' => 'string', 'label' => 'string', 'description' => 'string', 'statut' => 'string', 'idvote' => 'int'
+        'id' => 'int', 'date_election' => 'string', 'label' => 'string', 'description' => 'string', 'statut' => 'string'
     ];
 
     /**

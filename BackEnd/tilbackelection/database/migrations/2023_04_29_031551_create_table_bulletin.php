@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('label');
             $table->string('couleur');
             $table->string('photo');
-            $table->unsignedInteger('idvote');
-            $table->foreign('idvote')->references('id')->on('vote')->onDelete('cascade');
         });
     }
 

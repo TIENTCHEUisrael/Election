@@ -20,10 +20,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        \App\Models\Region::factory(10)->create();
-        \App\Models\Participant::factory(10)->create();        
-        \App\Models\Region::factory(10)->create();  
-        \App\Models\Vote::factory(10)->create();  
-        \App\Models\Bulletin::factory(10)->create();     
+        \App\Models\Region::factory(10)->create(); 
+        \App\Models\Participant::factory(200)->create();     
+        \App\Models\Bulletin::factory(5)->create();   
+        \App\Models\Election::factory(5)->create(); 
+        \App\Models\Vote::factory(195)->create();     
     }
 }

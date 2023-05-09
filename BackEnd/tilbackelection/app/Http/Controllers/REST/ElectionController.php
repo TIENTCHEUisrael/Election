@@ -33,7 +33,6 @@ class ElectionController extends Controller
                 'label' => $request->label,
                 'description' => $request->description,
                 'statut' => $request->statut,
-                'idvote' => $request->idvote,
             ]);
 
             DB::commit();

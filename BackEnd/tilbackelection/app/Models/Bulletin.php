@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @property int    $id
- * @property int    $idvote
  * @property string $label
  * @property string $couleur
  * @property string $photo
@@ -35,7 +34,7 @@ class Bulletin extends Model
      * @var array
      */
     protected $fillable = [
-        'label', 'couleur', 'photo', 'idvote'
+        'label', 'couleur', 'photo'
     ];
 
     /**
@@ -53,7 +52,7 @@ class Bulletin extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'int', 'label' => 'string', 'couleur' => 'string', 'photo' => 'string', 'idvote' => 'int'
+        'id' => 'int', 'label' => 'string', 'couleur' => 'string', 'photo' => 'string'
     ];
 
     /**

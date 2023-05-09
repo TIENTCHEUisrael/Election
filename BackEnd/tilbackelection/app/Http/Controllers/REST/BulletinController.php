@@ -32,7 +32,6 @@ class BulletinController extends Controller
                 'label' => $request->label,
                 'couleur' => $request->couleur,
                 'photo' => $request->photo,
-                'idvote' => $request->idvote,
             ]);
 
             DB::commit();

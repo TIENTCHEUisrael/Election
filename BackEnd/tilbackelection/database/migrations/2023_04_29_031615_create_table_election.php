@@ -18,9 +18,7 @@ return new class extends Migration
             $table->date('date_election');
             $table->string('label');
             $table->string('description');
-            $table->string('statut');
-            $table->unsignedInteger('idvote');
-            $table->foreign('idvote')->references('id')->on('vote')->onDelete('cascade');
+            $table->string('statut');            
         });
     }
 

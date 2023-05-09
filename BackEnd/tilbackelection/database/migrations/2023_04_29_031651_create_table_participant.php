@@ -26,9 +26,7 @@ return new class extends Migration
             $table->string('pwd',100);
             $table->string('email')->nullable;
             $table->string('etat',1)->default('0');
-            //$table->unsignedInteger('idvote');
             $table->unsignedInteger('idregion');
-           // $table->foreign('idvote')->references('id')->on('vote')->onDelete('cascade');
             $table->foreign('idregion')->references('id')->on('region')->onDelete('cascade');
         });
     }
