@@ -1,4 +1,5 @@
 php artisan make:migration create_table_table --create=table
+php artisan migrate
 php artisan migrate:fresh
 
 --Processus pour mettre en place l'initialisation des migrations
@@ -44,11 +45,13 @@ php artisan make:factory ParticipantFactory --model=Participant
 --Apres avoir mis les données a generer, ceci pour actualiser en envoyé dans la base de données
 php artisan migrate:fresh --seed
 
+--Créer les Tests
+php artisan make:test
+php artisan test
+
 --liste des actions par ordre
 Creer les migrations
 Les inserer dans la base de données
 Creer les models
 Creer les factory
 Et generer ces données
---Créer les Tests
-php artisan make:test
