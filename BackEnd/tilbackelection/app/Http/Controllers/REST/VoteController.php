@@ -93,7 +93,15 @@ class VoteController extends Controller
 
     public function resultat(){        
         DB::beginTransaction();
-        $resultat= DB::select('SELECT idBulletin, COUNT(id) FROM `vote` GROUP BY idBulletin');
+        $resultat= DB::select('SELECT idBulletin, COUNT(id) as count FROM vote GROUP BY idBulletin');
+        
+        /*$data=[];
+        foreach ($result as $resultat ) {
+            $data[]=[
+                'id'=> $resultat -> idBulletin,
+                'count'=>$result -> COUNT(id)
+            ];
+        }*/
         return response()->json($resultat, 200);
         
     }
